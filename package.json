@@ -4,11 +4,17 @@
   "description": "Test Node.js server that talks to a MongoDB database. ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
   "author": "Korhan Bircan",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.1"
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "mongodb": "^2.2.22"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
