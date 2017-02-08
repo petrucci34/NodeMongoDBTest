@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Node.js MongoDB test app</title>
+	</head>
+
+	<body>
+		May Node and Express be with you.
+
+		<ul class="items">
+		  <% for (var i=0; i < items.length; ++i) {%>
+		    <li class="item">
+		      <span><%= items[i].entry %></span>
+		    </li>
+		  <% } %>
+		</ul>
+
+		<form action="/items" method="POST">
+		<input type="text" placeholder="name" name="name">
+		<input type="text" placeholder="quote" name="quote">
+		<button type="submit">Submit</button>
+		</form>
+
+	</body>
+
+</html>
