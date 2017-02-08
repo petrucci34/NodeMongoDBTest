@@ -22,6 +22,10 @@ mongoClient.connect('mongodb://admin:admin-feb8-257@ds147599.mlab.com:47599/node
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/', (request, response) => {
+	var cursor = database.collection('items').find().toArray(function(error, results) {
+		console.log(results)
+	})
+
 	response.sendFile(__dirname + '/index.html')
 })
 
