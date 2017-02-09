@@ -22,11 +22,6 @@
   "devDependencies": {
     "nodemon": "^1.11.0"
   },
-  "dependencies": {
-    "ejs": "2.4.1",
-    "express": "^4.14.1",
-    "mongodb": "^2.2.22"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/petrucci34/NodeMongoDBTest"
