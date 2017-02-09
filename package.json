@@ -2,14 +2,14 @@
   "name": "node_mongodb_test",
   "version": "1.0.0",
   "description": "Test Node.js server that talks to a MongoDB database. ",
-  "main": "index.js",
+  "main": "server.js",
     "engines": {
     "node": "5.9.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "author": "Korhan Bircan",
   "license": "ISC",
