@@ -20,13 +20,17 @@ mongoClient.connect('mongodb://admin:admin-feb8-257@ds147599.mlab.com:47599/node
 })
 
 app.use(bodyParser.urlencoded({extended: true}))
+app.set('view engine', 'ejs')
 
 app.get('/', (request, response) => {
-	var cursor = database.collection('items').find().toArray(function(error, results) {
-		console.log(results)
-	})
+	database.collection('items').find().toArray((error, results) => {
+		if (error) {
+			consloe.log(error)
+			return
+		}
 
-	response.sendFile(__dirname + '/index.html')
+		response.render('index.ejs', {items: results.reverse()})
+	})
 })
 
 app.post('/items', (request, response) => {
@@ -36,6 +40,7 @@ app.post('/items', (request, response) => {
 			return 
 		}
 
+console.log(request.body)
 		console.log('Item saved to database.')
 		response.redirect('/')
 	})
